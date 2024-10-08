@@ -7,7 +7,7 @@
 
 <p align="left"> <a href="https://twitter.com/" target="blank"><img src="https://img.shields.io/twitter/follow/?logo=twitter&style=for-the-badge" alt="" /></a> </p>
 
-- 👨‍💻 Check out my portfolio: My Portfolio
+- 👨‍💻 Check out my portfolio: https://6673370a81326085d0471261--scintillating-fairy-e10ba8.netlify.app/
 - 🌱 Currently learning AI integration in Web Development
 - 💬 Ask me about JavaScript, React, and Mobile Development-
 - ⚡ Fun fact: I enjoy solving complex algorithms and creating dynamic user experiences.
