@@ -7,7 +7,7 @@
 
 <p align="left"> <a href="https://twitter.com/" target="blank"><img src="https://img.shields.io/twitter/follow/?logo=twitter&style=for-the-badge" alt="" /></a> </p>
 
-- 👨‍💻 All of my projects are available at [https://64de5359a7258a2d7d853551--super-speculoos-d3bd6b.netlify.app/](https://64de5359a7258a2d7d853551--super-speculoos-d3bd6b.netlify.app/)
+- 👨‍💻 All of my projects are available at [https://64de5359a7258a2d7d853551--super-speculoos-d3bd6b.netlify.app]
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
