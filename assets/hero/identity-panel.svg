@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" role="img" aria-label="Identity panel: AI/ML Engineer, Generative AI, Agentic AI, Computer Vision, LLM Systems, Real-time AI">
+<title>Identity panel: AI/ML Engineer, Generative AI, Agentic AI, Computer Vision, LLM Systems, Real-time AI</title>
+<defs>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05070D"/><stop offset="1" stop-color="#0A1020"/></linearGradient>
+<linearGradient id="neon" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22E4FF"/><stop offset="0.55" stop-color="#8B5CF6"/><stop offset="1" stop-color="#FF2BD6"/></linearGradient>
+</defs>
+<style>
+text{font-family:'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif} .m{font-family:'JetBrains Mono','SFMono-Regular',Consolas,'Courier New',monospace}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes drift{from{stroke-dashoffset:0}to{stroke-dashoffset:-40}}
+@keyframes scan{from{transform:translateY(-100%)}to{transform:translateY(100%)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;opacity:1!important}}
+
+</style>
+<rect x="1" y="1" width="898" height="398" rx="18" fill="rgba(15,25,45,0.85)" stroke="#22E4FF" stroke-opacity=".55" stroke-width="2"/><rect x="1" y="1" width="898" height="6" rx="3" fill="#22E4FF" opacity=".8"/>
+<text class="m" x="40" y="62" font-size="24" fill="#22E4FF" letter-spacing="2">SARVESHROCK // AI ENGINEER</text>
+<path d="M40 82 H860" stroke="#22E4FF" stroke-opacity=".3"/>
+<circle cx="48" cy="132" r="6" fill="#22E4FF" filter="url(#glow)" style="animation:pulse 3s infinite 0.0s"/>
+<text x="68" y="140" font-size="32" font-weight="600" fill="#EAF2FF">AI/ML Engineer</text>
+<circle cx="448" cy="132" r="6" fill="#22E4FF" filter="url(#glow)" style="animation:pulse 3s infinite 0.4s"/>
+<text x="468" y="140" font-size="32" font-weight="600" fill="#EAF2FF">Generative AI</text>
+<circle cx="48" cy="194" r="6" fill="#8B5CF6" filter="url(#glow)" style="animation:pulse 3s infinite 0.8s"/>
+<text x="68" y="202" font-size="32" font-weight="600" fill="#EAF2FF">Agentic AI</text>
+<circle cx="448" cy="194" r="6" fill="#8B5CF6" filter="url(#glow)" style="animation:pulse 3s infinite 1.2s"/>
+<text x="468" y="202" font-size="32" font-weight="600" fill="#EAF2FF">Computer Vision</text>
+<circle cx="48" cy="256" r="6" fill="#FF2BD6" filter="url(#glow)" style="animation:pulse 3s infinite 1.6s"/>
+<text x="68" y="264" font-size="32" font-weight="600" fill="#EAF2FF">LLM Systems</text>
+<circle cx="448" cy="256" r="6" fill="#FF2BD6" filter="url(#glow)" style="animation:pulse 3s infinite 2.0s"/>
+<text x="468" y="264" font-size="32" font-weight="600" fill="#EAF2FF">Real-time AI</text>
+<path d="M40 330 H860" stroke="#22E4FF" stroke-opacity=".3"/>
+<text class="m" x="40" y="372" font-size="23" fill="#39FF88">Problem Solver • Builder • Learner</text>
+</svg>

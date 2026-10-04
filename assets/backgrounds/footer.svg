@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="Keep building. Keep learning. Sarveshrock 2026">
+<title>Keep building. Keep learning. Sarveshrock 2026</title>
+<defs>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05070D"/><stop offset="1" stop-color="#0A1020"/></linearGradient>
+<linearGradient id="neon" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22E4FF"/><stop offset="0.55" stop-color="#8B5CF6"/><stop offset="1" stop-color="#FF2BD6"/></linearGradient>
+</defs>
+<style>
+text{font-family:'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif} .m{font-family:'JetBrains Mono','SFMono-Regular',Consolas,'Courier New',monospace}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes drift{from{stroke-dashoffset:0}to{stroke-dashoffset:-40}}
+@keyframes scan{from{transform:translateY(-100%)}to{transform:translateY(100%)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;opacity:1!important}}
+
+</style>
+<rect width="1200" height="340" fill="url(#bg)"/>
+<ellipse cx="600" cy="340" rx="700" ry="140" fill="#FF2BD6" opacity=".18"/>
+<rect x="0" y="229" width="68" height="111" fill="#070C1B"/>
+<rect x="53" y="296" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 5.5s infinite 2.9s"/>
+<rect x="15" y="302" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 6.1s infinite 4.0s"/>
+<rect x="10" y="294" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 3.7s infinite 2.7s"/>
+<rect x="72" y="212" width="96" height="128" fill="#070C1B"/>
+<rect x="81" y="296" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 7.8s infinite 3.3s"/>
+<rect x="154" y="303" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 6.1s infinite 4.2s"/>
+<rect x="84" y="227" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 4.0s infinite 1.2s"/>
+<rect x="172" y="201" width="41" height="139" fill="#070C1B"/>
+<rect x="190" y="250" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 6.0s infinite 1.0s"/>
+<rect x="183" y="290" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 5.5s infinite 3.3s"/>
+<rect x="190" y="292" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 5.0s infinite 2.8s"/>
+<rect x="217" y="290" width="99" height="50" fill="#070C1B"/>
+<rect x="253" y="308" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 5.6s infinite 0.1s"/>
+<rect x="293" y="322" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 5.0s infinite 4.2s"/>
+<rect x="270" y="300" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 7.2s infinite 0.0s"/>
+<rect x="320" y="294" width="53" height="46" fill="#070C1B"/>
+<rect x="354" y="314" width="6" height="9" fill="#FFB020" opacity=".8" style="animation:pulse 5.0s infinite 0.4s"/>
+<rect x="336" y="326" width="6" height="9" fill="#FFB020" opacity=".8" style="animation:pulse 4.3s infinite 0.4s"/>
+<rect x="345" y="302" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 6.8s infinite 0.6s"/>
+<rect x="377" y="210" width="55" height="130" fill="#070C1B"/>
+<rect x="387" y="219" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 5.3s infinite 2.4s"/>
+<rect x="416" y="242" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 5.5s infinite 4.9s"/>
+<rect x="389" y="271" width="6" height="9" fill="#FFB020" opacity=".8" style="animation:pulse 4.9s infinite 2.0s"/>
+<rect x="436" y="300" width="53" height="40" fill="#070C1B"/>
+<rect x="457" y="326" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 8.0s infinite 0.1s"/>
+<rect x="451" y="320" width="6" height="9" fill="#FFB020" opacity=".8" style="animation:pulse 6.2s infinite 0.5s"/>
+<rect x="449" y="314" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 4.3s infinite 3.9s"/>
+<rect x="493" y="263" width="61" height="77" fill="#070C1B"/>
+<rect x="521" y="275" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 3.5s infinite 2.9s"/>
+<rect x="512" y="271" width="6" height="9" fill="#FFB020" opacity=".8" style="animation:pulse 4.8s infinite 3.1s"/>
+<rect x="505" y="308" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 7.2s infinite 0.7s"/>
+<rect x="558" y="277" width="64" height="63" fill="#070C1B"/>
+<rect x="602" y="294" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 7.5s infinite 4.1s"/>
+<rect x="577" y="297" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 6.7s infinite 4.7s"/>
+<rect x="574" y="309" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 6.0s infinite 2.1s"/>
+<rect x="626" y="287" width="46" height="53" fill="#070C1B"/>
+<rect x="631" y="311" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 6.7s infinite 2.0s"/>
+<rect x="643" y="326" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 5.6s infinite 4.6s"/>
+<rect x="632" y="303" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 5.4s infinite 3.3s"/>
+<rect x="676" y="222" width="79" height="118" fill="#070C1B"/>
+<rect x="689" y="265" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 7.6s infinite 1.0s"/>
+<rect x="682" y="238" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 5.1s infinite 1.2s"/>
+<rect x="685" y="252" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 4.8s infinite 2.9s"/>
+<rect x="759" y="289" width="48" height="51" fill="#070C1B"/>
+<rect x="786" y="301" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 7.9s infinite 3.3s"/>
+<rect x="771" y="315" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 7.6s infinite 2.4s"/>
+<rect x="785" y="319" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 7.8s infinite 0.1s"/>
+<rect x="811" y="291" width="80" height="49" fill="#070C1B"/>
+<rect x="876" y="301" width="6" height="9" fill="#FFB020" opacity=".8" style="animation:pulse 4.6s infinite 0.7s"/>
+<rect x="824" y="301" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 5.7s infinite 3.7s"/>
+<rect x="831" y="324" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 4.8s infinite 3.4s"/>
+<rect x="895" y="291" width="97" height="49" fill="#070C1B"/>
+<rect x="952" y="324" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 7.3s infinite 2.9s"/>
+<rect x="978" y="320" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 4.9s infinite 0.1s"/>
+<rect x="908" y="301" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 6.2s infinite 5.0s"/>
+<rect x="996" y="247" width="96" height="93" fill="#070C1B"/>
+<rect x="1042" y="304" width="6" height="9" fill="#FFB020" opacity=".8" style="animation:pulse 6.5s infinite 2.3s"/>
+<rect x="1059" y="324" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 5.6s infinite 2.6s"/>
+<rect x="1039" y="266" width="6" height="9" fill="#FF2BD6" opacity=".8" style="animation:pulse 3.1s infinite 4.8s"/>
+<rect x="1096" y="237" width="47" height="103" fill="#070C1B"/>
+<rect x="1131" y="277" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 4.8s infinite 0.7s"/>
+<rect x="1112" y="311" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 6.8s infinite 1.7s"/>
+<rect x="1128" y="308" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 4.6s infinite 3.3s"/>
+<rect x="1147" y="219" width="52" height="121" fill="#070C1B"/>
+<rect x="1178" y="323" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 7.4s infinite 1.9s"/>
+<rect x="1171" y="253" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 3.7s infinite 1.8s"/>
+<rect x="1153" y="318" width="6" height="9" fill="#22E4FF" opacity=".8" style="animation:pulse 7.8s infinite 1.4s"/>
+<rect x="300" y="40" width="600" height="190" rx="18" fill="rgba(15,25,45,.8)" stroke="url(#neon)" stroke-width="2.5"/>
+<text x="600" y="108" text-anchor="middle" font-size="34" font-weight="800" letter-spacing="4" fill="#EAF2FF" filter="url(#glow)">KEEP BUILDING. KEEP LEARNING.</text>
+<text x="600" y="150" text-anchor="middle" font-size="21" fill="#8FA3BF">Turning ideas into real-world intelligent solutions.</text>
+<text class="m" x="600" y="202" text-anchor="middle" font-size="19" letter-spacing="3" fill="#22E4FF">SARVESHROCK // 2026</text>
+</svg>
