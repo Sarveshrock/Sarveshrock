@@ -190,8 +190,8 @@ def now_playing():
     write("animations/now-playing.svg", svg(W, H, "\n".join(b), "Now playing: Building the Future (visual only, no audio)"))
 
 
-def button(slug, label, glyph, c):
-    W, H = 200, 64
+def button(slug, label, glyph, c, W=200):
+    H = 64
     b = [f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="14" fill="#0B1325" stroke="{c}" stroke-width="2"/>',
          f'<text x="26" y="42" font-size="24" fill="{c}" filter="url(#glow)">{glyph}</text>',
          f'<text x="62" y="41" font-size="21" font-weight="700" letter-spacing="1" fill="{TEXT}">{label}</text>']
@@ -345,4 +345,4 @@ if __name__ == "__main__":
         header(slug, label, sub, c)
     terminal(); ai_core(); project_cards(); tech(); experience(); achievements(); status(); now_playing(); footer()
     button("github", "GitHub", "⌥", CYAN); button("email", "Email", "✉", MAGENTA)
-    button("linkedin", "LinkedIn", "in", VIOLET); button("portfolio", "Portfolio", "◈", GREEN)
+    button("linkedin", "LinkedIn", "in", VIOLET); button("portfolio", "Portfolio", "◈", GREEN); button("enter", "ENTER SARVESH.OS →", "▶", MAGENTA, 340)

@@ -106,8 +106,8 @@ def contributions(cells, total):
     return wrap(W, H, "\n".join(b), f"{total} GitHub contributions in the last year")
 
 
-def languages(repos):
-    W, H = 900, 300
+def lang_rows(repos):
+    """Top-5 languages + Other by code size across non-fork public repos. Raises on API failure."""
     tot = {}
     for r in repos:
         if r["fork"]: continue
@@ -118,6 +118,12 @@ def languages(repos):
     rows = top[:5]
     other = sum(v for _, v in top[5:])
     if other: rows.append(("Other", other))
+    return rows, s
+
+
+def languages(repos):
+    W, H = 900, 300
+    rows, s = lang_rows(repos)
     b = [card(W, H, VIOLET), f'<text x="28" y="46" font-size="22" font-weight="700" fill="{TEXT}">Most Used Languages</text>']
     x = 28; bw = 470
     for i, (k, v) in enumerate(rows):
@@ -134,6 +140,19 @@ def languages(repos):
     b.append(f'<circle cx="{cx}" cy="{cy}" r="68" fill="{BG2}" stroke="url(#neon)" stroke-width="4" filter="url(#glow)"/>')
     b.append(f'<text x="{cx}" y="{cy+16}" text-anchor="middle" font-size="46" font-weight="800" fill="{CYAN}" filter="url(#glow)">AI</text>')
     return wrap(W, H, "\n".join(b), "Most used languages: " + ", ".join(f"{k} {100*v/s:.1f}%" for k, v in rows))
+
+
+def collect():
+    user = json.loads(get(f"https://api.github.com/users/{USER}"))
+    repos = json.loads(get(f"https://api.github.com/users/{USER}/repos?per_page=100"))
+    html = get(f"https://github.com/users/{USER}/contributions")
+    cells = []
+    for tag in re.findall(r"<td [^>]*data-date=[^>]*>", html):
+        d = re.search(r'data-date="([\d-]+)"', tag); l = re.search(r'data-level="(\d)"', tag)
+        if d and l: cells.append((d.group(1), int(l.group(1))))
+    tm = re.search(r"([\d,]+)\s+contributions?\s+in\s+the\s+last\s+year", html)
+    if not cells or not tm: sys.exit("could not parse contribution calendar; leaving existing assets untouched")
+    return user, repos, cells, int(tm.group(1).replace(",", ""))
 
 
 def main():

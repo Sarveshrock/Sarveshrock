@@ -1,0 +1,107 @@
+{
+  "_meta": {
+    "rule": "Visual creativity unlimited, factual creativity zero. Every fact carries a source: resume | github | brief (user's own wording, not in resume/GitHub).",
+    "numbers": "Repository/follower/following/contribution counts are NEVER stored here. They are fetched live."
+  },
+  "identity": {
+    "name": "Sarvesh Shimpi",
+    "githubName": "Sarvesh Sunil Shimpi",
+    "username": "Sarveshrock",
+    "github": "https://github.com/Sarveshrock",
+    "linkedin": "https://www.linkedin.com/in/shimpi-ss-150186389",
+    "portfolio": "https://6673370a81326085d0471261--scintillating-fairy-e10ba8.netlify.app/",
+    "email": "sarveshshimpi18@gmail.com",
+    "source": "resume + user-confirmed"
+  },
+  "professional": {
+    "title": "AI/ML Engineer",
+    "currentRole": "Python Automation & AI Platform Developer",
+    "company": "Infosys",
+    "tagline": "Building AI solutions for a better tomorrow.",
+    "motto": "Turning ideas into real-world intelligent solutions.",
+    "summary": "AI/ML Engineer with deep expertise in building end-to-end production-grade ML systems, specializing in Computer Vision, Generative AI, LLMs, and real-time AI agents.",
+    "source": "resume (summary, role) / brief (tagline, motto)"
+  },
+  "focus": ["AI/ML Engineer", "Generative AI", "Agentic AI", "Computer Vision", "LLM Systems", "Real-time AI"],
+  "whoami": ["AI/ML Engineer", "Problem Solver", "Open Source Enthusiast", "Lifelong Learner"],
+  "currentlyBuilding": ["AI Systems", "Generative AI", "Agentic AI", "Intelligent Automation", "Real-world ML applications", "Open Source"],
+  "skills": {
+    "languages": ["Python", "SQL", "C++", "Java"],
+    "frameworks": ["PyTorch", "TensorFlow", "Keras", "Scikit-learn", "Hugging Face Transformers"],
+    "domains": ["Computer Vision", "NLP/LLMs", "Generative AI", "Multi-Modal Learning", "Deepfake Detection", "Recommendation Systems"],
+    "tools": ["OpenCV", "LangChain", "OpenAI API", "Weights & Biases", "Pandas", "NumPy", "Matplotlib", "Albumentations"],
+    "deployment": ["Docker", "Flask", "FastAPI", "REST APIs", "Git", "Multi-threading", "AsyncIO", "ONNX"],
+    "expertise": ["Model Optimization & Quantization", "Scalable ML Pipelines", "Feature Engineering", "Real-time Inference", "A/B Testing", "Distributed Training"],
+    "source": "resume"
+  },
+  "icons": [
+    { "id": "python", "label": "Python" }, { "id": "java", "label": "Java" }, { "id": "cplusplus", "label": "C++" },
+    { "id": "pytorch", "label": "PyTorch" }, { "id": "tensorflow", "label": "TensorFlow" }, { "id": "keras", "label": "Keras" },
+    { "id": "scikitlearn", "label": "scikit-learn" }, { "id": "opencv", "label": "OpenCV" }, { "id": "pandas", "label": "Pandas" },
+    { "id": "numpy", "label": "NumPy" }, { "id": "flask", "label": "Flask" }, { "id": "fastapi", "label": "FastAPI" },
+    { "id": "docker", "label": "Docker" }, { "id": "git", "label": "Git" }
+  ],
+  "moreTech": ["Hugging Face", "LangChain", "OpenAI API", "SQL", "ONNX", "Weights & Biases", "Albumentations", "Matplotlib", "REST APIs", "AsyncIO", "Multi-threading", "Quantization", "Distributed Training", "A/B Testing"],
+  "experience": [
+    {
+      "dates": "Aug 2025 – Present", "company": "Infosys", "role": "Python Automation & AI Platform Developer", "accent": "#22E4FF", "source": "resume",
+      "bullets": [
+        "Developed Python-based automation frameworks and AI-powered platforms to streamline enterprise workflows and eliminate manual processes",
+        "Built and deployed scalable AI/ML-integrated pipelines and RESTful APIs (FastAPI/Flask) supporting real-time, production-grade automation",
+        "Engineered intelligent process-automation solutions using Python and integrated AI models, reducing operational turnaround time",
+        "Collaborated with cross-functional teams to embed AI capabilities into enterprise systems, improving reliability, scalability, and code quality"
+      ],
+      "short": ["AI-powered enterprise workflow automation", "Scalable ML pipelines + FastAPI / Flask APIs", "Cross-team AI integration into enterprise systems"]
+    },
+    {
+      "dates": "Jun 2024 – Jan 2025", "company": "CanSpirit AI", "role": "AI Developer Intern", "accent": "#8B5CF6", "source": "resume",
+      "bullets": [
+        "Designed and built FileFinder, a large-scale AI-powered enterprise document intelligence system for intelligent scanning and monitoring across millions of files",
+        "Developed high-performance metadata extraction pipelines using regex and ML-based techniques, improving retrieval efficiency by 40%+ at scale",
+        "Implemented multi-threaded and asynchronous processing architecture, drastically reducing latency in high-volume production environments",
+        "Owned complete end-to-end system architecture, scalability design, and deployment strategy for enterprise-grade usage"
+      ],
+      "short": ["FileFinder: document intelligence across millions of files", "Metadata extraction: retrieval efficiency 40%+", "Multi-threaded + async processing"]
+    },
+    {
+      "dates": "Jun 2023 – Aug 2023", "company": "IIT Gandhinagar", "role": "AI / Game Development Intern", "accent": "#FF2BD6", "source": "resume",
+      "bullets": [
+        "Developed advanced AI systems for pathfinding (A*) and NPC behavior using reinforcement learning concepts and decision trees",
+        "Achieved 20% improvement in game performance and responsiveness through algorithmic and code-level optimizations"
+      ],
+      "short": ["A* pathfinding + NPC behavior (RL concepts, decision trees)", "20% gain in game performance"]
+    }
+  ],
+  "projects": [
+    { "slug": "voice-agent", "name": "AI Voice Agent for Doctor Appointment Booking", "category": "LLM + Real-time Voice System", "accent": "#FF2BD6", "repo": null, "source": "resume",
+      "description": "Fully autonomous conversational voice agent supporting natural multi-turn interactions. Speech-to-Text (Whisper), LLM dialogue management with long-term context memory, intent classification and Text-to-Speech. Stateful workflows for slot checking, booking, rescheduling, cancellation and fallbacks. Reduced manual booking workload by 70%.",
+      "stack": ["Whisper", "LLM", "TTS", "Intent classification"] },
+    { "slug": "deepfake", "name": "Deepfake Video Detection System", "category": "Computer Vision — Spatial-Temporal Modeling", "accent": "#22E4FF", "repo": null, "source": "resume",
+      "description": "Hybrid CNN-RNN (LSTM/Transformer) architecture using spatial frame features and temporal dynamics. Preprocessing with MTCNN face detection, alignment, frame sampling and augmentation. Optimized real-time, low-latency inference engine.",
+      "stack": ["CNN", "LSTM", "Transformer", "MTCNN"] },
+    { "slug": "ml-platform", "name": "Multi-Model ML Prediction Platform", "category": "End-to-End Scalable ML System", "accent": "#FFB020", "repo": null, "source": "resume",
+      "description": "Multi-task learning system for placement delay prediction, salary estimation and risk classification with a shared feature store. Owned data ingestion, feature engineering, training, Optuna tuning and A/B testing. Dockerized and deployed as a REST API (Flask + Gunicorn).",
+      "stack": ["Optuna", "Docker", "Flask", "Gunicorn"] },
+    { "slug": "draggan", "name": "DragGAN — Interactive Generative Image Manipulation", "category": "Generative AI", "accent": "#FF2BD6", "repo": null, "source": "resume",
+      "description": "Implemented and enhanced the DragGAN framework for precise point-based real-time image editing. Improved training stability and reduced artifacts through custom loss functions and architectural refinements.",
+      "stack": ["GAN", "Custom loss functions"] },
+    { "slug": "pothole", "name": "Real-Time Pothole Detection & Road Anomaly System", "category": "Computer Vision", "accent": "#22E4FF", "repo": null, "source": "resume",
+      "description": "Real-time pothole and road damage detection using YOLOv8 and EfficientDet. Achieved high mAP and deployed on edge devices for smart-city infrastructure monitoring.",
+      "stack": ["YOLOv8", "EfficientDet", "Edge deployment"] },
+    { "slug": "rag-qa", "name": "LLM-Powered Personalized Recommendation & Q&A System", "category": "RAG + Fine-tuning", "accent": "#8B5CF6", "repo": null, "source": "resume",
+      "description": "Retrieval-Augmented Generation system with a fine-tuned LLM for domain-specific question answering. Vector database (FAISS/Chroma) with hybrid search and prompt optimization.",
+      "stack": ["RAG", "FAISS", "Chroma", "Fine-tuning"] },
+    { "slug": "travel-planner", "name": "AI Travel Planner with Multi-Agent Architecture", "category": "LLM + Full-Stack", "accent": "#39FF88", "repo": null, "source": "resume",
+      "description": "AI travel itinerary generator using LangChain, OpenAI API and a multi-agent collaboration framework. Responsive full-stack web app with Next.js, TypeScript and Tailwind CSS with dynamic visualizations.",
+      "stack": ["LangChain", "OpenAI API", "Next.js", "TypeScript", "Tailwind CSS"] },
+    { "slug": "unmaskai", "name": "UnmaskAI", "category": "Hackathon", "accent": "#FFB020", "repo": "https://github.com/Sarveshrock/UnmaskAI", "source": "github",
+      "description": "SEED Hackathon submission.", "stack": ["Python"] }
+  ],
+  "achievements": [
+    { "org": "IISc Bangalore", "text": "3rd Prize — ML system achieving 20% accuracy improvement", "accent": "#FFB020", "source": "resume" },
+    { "org": "IIT Bombay", "text": "Robotic optimization system that reduced processing time by 30%", "accent": "#22E4FF", "source": "resume" },
+    { "org": "IIT BHU", "text": "Built and deployed platform adopted by 5,000+ active users", "accent": "#39FF88", "source": "resume" },
+    { "org": "IIT Kanpur", "text": "Hackathon Finalist among 200+ teams", "accent": "#FF2BD6", "source": "resume" }
+  ],
+  "education": { "institution": "MIT World Peace University (MIT-WPU), Pune", "degree": "B.Tech in Computer Engineering", "gpa": "8.49/10", "years": "2021 – 2025", "source": "resume" }
+}
