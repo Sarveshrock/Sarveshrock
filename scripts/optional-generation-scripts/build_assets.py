@@ -51,80 +51,6 @@ def panel(w, h, accent, x=0, y=0, r=18):
             f'<rect x="{x+1}" y="{y+1}" width="{w-2}" height="6" rx="3" fill="{accent}" opacity=".8"/>')
 
 
-# ───────────────────────── HERO ─────────────────────────
-def hero():
-    random.seed(7)
-    W, H = 1200, 600
-    b = [f'<rect width="{W}" height="{H}" fill="url(#bg)"/>',
-         f'<ellipse cx="600" cy="430" rx="700" ry="170" fill="{MAGENTA}" opacity=".16"/>',
-         f'<ellipse cx="300" cy="400" rx="420" ry="120" fill="{VIOLET}" opacity=".18"/>']
-    for _ in range(70):
-        b.append(f'<circle cx="{random.randint(0,W)}" cy="{random.randint(0,300)}" r="{random.choice([1,1,1.5,2])}" fill="#fff" opacity=".6" style="animation:pulse {random.uniform(2,6):.1f}s infinite {random.uniform(0,4):.1f}s"/>')
-    # skyline (two layers) with windows
-    for layer, (col, base, hmax, op) in enumerate([("#0B1226", 470, 230, 1), ("#070C1B", 520, 300, 1)]):
-        x = -20
-        while x < W:
-            bw = random.randint(46, 110); bh = random.randint(70, hmax)
-            b.append(f'<rect x="{x}" y="{base-bh}" width="{bw}" height="{bh+200}" fill="{col}"/>')
-            if layer == 1:
-                for wy in range(base-bh+12, base-6, 22):
-                    for wx in range(x+8, x+bw-10, 18):
-                        if random.random() < .22:
-                            c = random.choice([CYAN, MAGENTA, AMBER, VIOLET])
-                            b.append(f'<rect x="{wx}" y="{wy}" width="7" height="10" fill="{c}" opacity=".85" style="animation:pulse {random.uniform(3,9):.1f}s infinite {random.uniform(0,6):.1f}s"/>')
-            x += bw + random.randint(2, 10)
-    # desk + developer + laptop (right)
-    b.append(f'<rect x="760" y="520" width="440" height="80" fill="#04060B"/>')
-    b.append(f'<path d="M880 520 q0 -70 60 -90 q60 20 60 90z" fill="#02040A"/><circle cx="940" cy="408" r="30" fill="#02040A"/>')
-    b.append(f'<path d="M840 530 L1030 530 L1010 450 L860 450z" fill="#0D1530" stroke="{CYAN}" stroke-opacity=".7" stroke-width="2"/>')
-    b.append(f'<rect x="868" y="458" width="134" height="62" fill="{CYAN}" opacity=".12"/><path d="M880 480 h50 M880 494 h86 M880 508 h30" stroke="{CYAN}" stroke-width="3" opacity=".8"/>')
-    b.append(f'<path d="M800 530 H1070" stroke="{MAGENTA}" stroke-width="3" filter="url(#glow)"/>')
-    # scanline overlay
-    b.append(f'<rect width="{W}" height="40" fill="{CYAN}" opacity=".05" style="animation:scan 6s linear infinite"/>')
-    # title
-    b.append(f'<text x="60" y="170" font-size="104" font-weight="800" letter-spacing="6" fill="url(#neon)" filter="url(#glow)">SARVESH</text>')
-    b.append(f'<text x="60" y="270" font-size="104" font-weight="800" letter-spacing="6" fill="url(#neon)" filter="url(#glow)">SHIMPI</text>')
-    b.append(f'<text x="64" y="320" font-size="30" font-weight="700" letter-spacing="5" fill="{CYAN}">AI/ML ENGINEER</text>')
-    b.append(f'<text x="64" y="356" font-size="22" letter-spacing="3" fill="{TEXT}">BUILDING INTELLIGENT SYSTEMS FOR THE REAL WORLD</text>')
-    b.append(f'<rect x="40" y="378" width="520" height="222" rx="14" fill="{BG}" opacity=".78"/>')
-    lines = ["initializing...", "AI systems online", "generative AI online", "computer vision online", "agentic systems online", "ready to build"]
-    for i, l in enumerate(lines):
-        col = GREEN if i == len(lines)-1 else MUTED
-        b.append(f'<text class="m" x="64" y="{405+i*26}" font-size="19" fill="{col}" opacity="0" style="animation:fade .4s forwards {0.6+i*0.7:.1f}s">&gt; {l}</text>')
-    b.append(f'<rect x="64" y="{405+6*26-14}" width="11" height="20" fill="{GREEN}" style="animation:blink 1s infinite 5s"/>')
-    b.append(f'<text x="64" y="578" font-size="20" font-style="italic" fill="{MUTED}">“Building AI solutions for a better tomorrow.”</text>')
-    return svg(W, H, "\n".join(b), "Sarvesh Shimpi — AI/ML Engineer. Building intelligent systems for the real world.")
-
-
-# ───────────────────────── SECTION HEADERS ─────────────────────────
-def header(slug, label, sub, accent):
-    W, H = 1000, 90
-    b = (f'<rect width="{W}" height="{H}" fill="none"/>'
-         f'<path d="M0 70 H{W}" stroke="{accent}" stroke-opacity=".35" stroke-width="2"/>'
-         f'<path d="M0 70 H260" stroke="{accent}" stroke-width="3" filter="url(#glow)" stroke-dasharray="14 6" style="animation:drift 2s linear infinite"/>'
-         f'<text class="m" x="4" y="22" font-size="17" fill="{accent}" letter-spacing="3">// {escape(sub)}</text>'
-         f'<text x="2" y="62" font-size="40" font-weight="800" letter-spacing="4" fill="{TEXT}">{escape(label)}</text>')
-    write(f"headers/{slug}.svg", svg(W, H, b, label))
-
-
-# ───────────────────────── IDENTITY PANEL ─────────────────────────
-def identity():
-    W, H = 900, 400
-    items = ["AI/ML Engineer", "Generative AI", "Agentic AI", "Computer Vision", "LLM Systems", "Real-time AI"]
-    b = [panel(W, H, CYAN),
-         f'<text class="m" x="40" y="62" font-size="24" fill="{CYAN}" letter-spacing="2">SARVESHROCK // AI ENGINEER</text>',
-         f'<path d="M40 82 H{W-40}" stroke="{CYAN}" stroke-opacity=".3"/>']
-    for i, t in enumerate(items):
-        col, row = i % 2, i // 2
-        x, y = 40 + col * 400, 140 + row * 62
-        c = [CYAN, VIOLET, MAGENTA][row]
-        b.append(f'<circle cx="{x+8}" cy="{y-8}" r="6" fill="{c}" filter="url(#glow)" style="animation:pulse 3s infinite {i*.4:.1f}s"/>')
-        b.append(f'<text x="{x+28}" y="{y}" font-size="32" font-weight="600" fill="{TEXT}">{t}</text>')
-    b.append(f'<path d="M40 {H-70} H{W-40}" stroke="{CYAN}" stroke-opacity=".3"/>')
-    b.append(f'<text class="m" x="40" y="{H-28}" font-size="23" fill="{GREEN}">Problem Solver • Builder • Learner</text>')
-    write("hero/identity-panel.svg", svg(W, H, "\n".join(b), "Identity panel: AI/ML Engineer, Generative AI, Agentic AI, Computer Vision, LLM Systems, Real-time AI"))
-
-
 # ───────────────────────── TERMINAL ─────────────────────────
 def terminal():
     W, H = 900, 560
@@ -160,47 +86,9 @@ def ai_core():
     b.append(f'<text x="{cx}" y="{cy+112}" text-anchor="middle" font-size="26" font-weight="800" letter-spacing="4" fill="{TEXT}">AI CORE</text>')
     for t, x, y, c in nodes:
         w = 14 * len(t) + 36
-        b.append(f'<rect x="{x-w/2}" y="{y-26}" width="{w}" height="52" rx="26" fill="rgba(15,25,45,.92)" stroke="{c}" stroke-width="2.5"/>')
+        b.append(f'<rect x="{x-w/2}" y="{y-26}" width="{w}" height="52" rx="26" fill="#0B1325" stroke="{c}" stroke-width="2.5"/>')
         b.append(f'<text x="{x}" y="{y+8}" text-anchor="middle" font-size="22" font-weight="700" letter-spacing="1" fill="{c}">{t}</text>')
     write("animations/ai-core.svg", svg(W, H, "\n".join(b), "AI Core connected to Computer Vision, LLMs, Generative AI and Agentic AI"))
-
-
-# ───────────────────────── PROJECT CARDS ─────────────────────────
-PROJECTS = [  # slug, name, category, accent, description, stack
-    ("voice-agent", "AI VOICE AGENT", "GENERATIVE AI · VOICE", MAGENTA,
-     "Autonomous multi-turn voice agent for doctor appointment booking. Cut manual booking workload by 70%.", "Whisper • LLM • TTS • Intent"),
-    ("deepfake", "DEEPFAKE DETECTION", "COMPUTER VISION", CYAN,
-     "Hybrid CNN-RNN spatial-temporal detector with MTCNN preprocessing and low-latency inference.", "CNN • LSTM • Transformer • MTCNN"),
-    ("ml-platform", "MULTI-MODEL ML PLATFORM", "ML SYSTEMS", AMBER,
-     "Multi-task placement delay, salary and risk prediction. Optuna tuning, A/B testing, Dockerized REST API.", "Optuna • Docker • Flask • Gunicorn"),
-    ("draggan", "DRAGGAN", "GENERATIVE AI", MAGENTA,
-     "Point-based real-time image editing with custom losses for better training stability and fewer artifacts.", "GAN • Custom Loss • Image Editing"),
-    ("pothole", "POTHOLE DETECTION", "COMPUTER VISION · EDGE", CYAN,
-     "Real-time pothole and road-damage detection deployed on edge devices for smart-city monitoring.", "YOLOv8 • EfficientDet • Edge"),
-    ("rag-qa", "LLM RECOMMENDATION & Q&A", "LLM · RAG", VIOLET,
-     "RAG plus fine-tuned LLM for domain-specific question answering with hybrid vector search.", "RAG • FAISS • Chroma • Fine-tuning"),
-    ("travel-planner", "AI TRAVEL PLANNER", "AGENTIC AI", GREEN,
-     "Multi-agent itinerary generator with a responsive full-stack web app and dynamic visualizations.", "LangChain • OpenAI • Next.js • TypeScript"),
-    # public repository (GitHub-verified description only)
-    ("unmaskai", "UNMASKAI", "HACKATHON · PUBLIC REPO", AMBER,
-     "SEED Hackathon submission.", "Python"),
-]
-
-
-def project_cards():
-    W, H = 600, 270
-    for slug, name, cat, c, desc, stack in PROJECTS:
-        b = [panel(W, H, c)]
-        b.append(f'<text x="30" y="58" font-size="28" font-weight="800" fill="{TEXT}">◈ {escape(name)}</text>')
-        b.append(f'<text class="m" x="30" y="90" font-size="16" letter-spacing="2" fill="{c}">{escape(cat)}</text>')
-        for i, ln in enumerate(textwrap.wrap(desc, 46)[:3]):
-            b.append(f'<text x="30" y="{128+i*27}" font-size="19" fill="{MUTED}">{escape(ln)}</text>')
-        b.append(f'<text class="m" x="30" y="{H-48}" font-size="16" fill="{TEXT}">{escape(stack)}</text>')
-        b.append(f'<path d="M30 {H-34} H{W-30}" stroke="{c}" stroke-opacity=".3"/>')
-        tag = "SOURCE: GITHUB" if "PUBLIC REPO" in cat else "SOURCE: RESUME · NO PUBLIC REPO"
-        b.append(f'<text class="m" x="30" y="{H-12}" font-size="13" letter-spacing="1" fill="{MUTED}">{tag}</text>')
-        b.append(f'<rect x="0" y="0" width="{W}" height="30" fill="{c}" opacity=".07" style="animation:scan 5s linear infinite"/>')
-        write(f"projects/{slug}.svg", svg(W, H, "\n".join(b), f"{name} — {cat}. {desc}"))
 
 
 # ───────────────────────── TECH CONSTELLATION ─────────────────────────
@@ -226,7 +114,7 @@ def tech():
         b = []
         for i, (rx, ry, w, t) in enumerate(rows):
             b.append(f'<g transform="translate({rx+150},{ry+4})" style="animation:pulse 5s infinite {i*.3:.1f}s">'
-                     f'<rect width="{w}" height="48" rx="12" fill="rgba(15,25,45,.85)" stroke="{c}" stroke-opacity=".7" stroke-width="2"/>'
+                     f'<rect width="{w}" height="48" rx="12" fill="#0B1325" stroke="{c}" stroke-opacity=".7" stroke-width="2"/>'
                      f'<circle cx="18" cy="24" r="4" fill="{c}" filter="url(#glow)"/>'
                      f'<text x="32" y="32" font-size="21" font-weight="600" fill="{TEXT}">{escape(t)}</text></g>')
         b.append(f'<text class="m" x="0" y="34" font-size="19" letter-spacing="2" fill="{c}">{label}</text>')
@@ -304,7 +192,7 @@ def now_playing():
 
 def button(slug, label, glyph, c):
     W, H = 200, 64
-    b = [f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="14" fill="rgba(15,25,45,.9)" stroke="{c}" stroke-width="2"/>',
+    b = [f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="14" fill="#0B1325" stroke="{c}" stroke-width="2"/>',
          f'<text x="26" y="42" font-size="24" fill="{c}" filter="url(#glow)">{glyph}</text>',
          f'<text x="62" y="41" font-size="21" font-weight="700" letter-spacing="1" fill="{TEXT}">{label}</text>']
     write(f"social/{slug}.svg", svg(W, H, "\n".join(b), label))
@@ -321,7 +209,7 @@ def footer():
         for _ in range(3):
             b.append(f'<rect x="{x+random.randint(4,bw-12)}" y="{H-bh+random.randint(8,bh-14)}" width="6" height="9" fill="{random.choice([CYAN,MAGENTA,AMBER])}" opacity=".8" style="animation:pulse {random.uniform(3,8):.1f}s infinite {random.uniform(0,5):.1f}s"/>')
         x += bw + 4
-    b.append(f'<rect x="300" y="40" width="600" height="190" rx="18" fill="rgba(15,25,45,.8)" stroke="url(#neon)" stroke-width="2.5"/>')
+    b.append(f'<rect x="300" y="40" width="600" height="190" rx="18" fill="#0B1325" stroke="url(#neon)" stroke-width="2.5"/>')
     b.append(f'<text x="600" y="108" text-anchor="middle" font-size="34" font-weight="800" letter-spacing="4" fill="{TEXT}" filter="url(#glow)">KEEP BUILDING. KEEP LEARNING.</text>')
     b.append(f'<text x="600" y="150" text-anchor="middle" font-size="21" fill="{MUTED}">Turning ideas into real-world intelligent solutions.</text>')
     b.append(f'<text class="m" x="600" y="202" text-anchor="middle" font-size="19" letter-spacing="3" fill="{CYAN}">SARVESHROCK // 2026</text>')
@@ -331,20 +219,130 @@ def footer():
 def frame():
     """Contribution-matrix frame: header strip shown above the dynamic activity graph."""
     W, H = 900, 80
-    b = [f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="14" fill="rgba(15,25,45,.85)" stroke="{CYAN}" stroke-opacity=".5" stroke-width="2"/>',
+    b = [f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="14" fill="#0B1325" stroke="{CYAN}" stroke-opacity=".5" stroke-width="2"/>',
          f'<text class="m" x="28" y="48" font-size="22" fill="{CYAN}">&gt; contributions<tspan style="animation:blink 1s infinite">_</tspan></text>',
          f'<text class="m" x="{W-28}" y="48" font-size="17" fill="{MUTED}" text-anchor="end">LESS ░▒▓█ MORE</text>']
     write("backgrounds/contrib-frame.svg", svg(W, H, "\n".join(b), "Contribution matrix: less to more"))
 
 
+# ───────────────────────── BANNER ─────────────────────────
+def banner():
+    W, H = 1200, 440
+    random.seed(21)
+    b = [f'<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#120a33"/><stop offset=".55" stop-color="#5a2a7e"/><stop offset="1" stop-color="#d9507e"/></linearGradient>'
+         f'<radialGradient id="moon" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#f2ecff"/><stop offset="1" stop-color="#9a86d8"/></radialGradient>'
+         f'<linearGradient id="shade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{BG}" stop-opacity=".85"/><stop offset=".55" stop-color="{BG}" stop-opacity="0"/></linearGradient></defs>',
+         f'<rect width="{W}" height="{H}" fill="url(#sky)"/>']
+    for _ in range(60):
+        b.append(f'<circle cx="{random.randint(0,W)}" cy="{random.randint(0,200)}" r="{random.choice([1,1,1.6])}" fill="#fff" opacity=".7" style="animation:pulse {random.uniform(2,6):.1f}s infinite {random.uniform(0,4):.1f}s"/>')
+    b.append('<circle cx="790" cy="110" r="150" fill="url(#moon)" opacity=".92"/>')
+    for cx, cy, r in ((740, 90, 26), (830, 150, 20), (780, 60, 14), (860, 70, 18)):
+        b.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="#7d6cc0" opacity=".35"/>')
+    b.append(f'<ellipse cx="640" cy="330" rx="520" ry="40" fill="{MAGENTA}" opacity=".25"/>')
+    layers = [("#3a1f66", 360, 150, .75, False), ("#1c1040", 400, 190, .95, True), ("#0a0720", 460, 150, 1, True)]
+    for col, base, hmax, op, win in layers:
+        x = -30
+        while x < W:
+            bw = random.randint(38, 96); bh = random.randint(40, hmax)
+            b.append(f'<rect x="{x}" y="{base-bh}" width="{bw}" height="{bh+120}" fill="{col}" opacity="{op}"/>')
+            if win:
+                for wy in range(base-bh+10, base-4, 18):
+                    for wx in range(x+7, x+bw-9, 15):
+                        if random.random() < .2:
+                            b.append(f'<rect x="{wx}" y="{wy}" width="6" height="9" fill="{random.choice([CYAN,MAGENTA,AMBER,"#ffd9f0"])}" opacity=".85" style="animation:pulse {random.uniform(3,9):.1f}s infinite {random.uniform(0,6):.1f}s"/>')
+            x += bw + random.randint(2, 8)
+    b.append(f'<path d="M1010 {H} V120 L1017 120 L1017 {H}z" fill="#0a0720"/><path d="M1013 120 V60" stroke="{MAGENTA}" stroke-width="2"/><circle cx="1013" cy="58" r="4" fill="{MAGENTA}" filter="url(#glow)" style="animation:pulse 2s infinite"/>')
+    # ledge + hooded developer seen from behind
+    b.append(f'<rect x="470" y="352" width="360" height="{H-352}" fill="#05030f"/><rect x="470" y="352" width="360" height="3" fill="{CYAN}" opacity=".7" filter="url(#glow)"/>')
+    body = "M588 352 C586 292 606 252 642 248 C680 252 700 292 698 352Z"
+    b.append('<path d="M690 346 q52 -14 88 8 l-4 -18 q-44 -22 -84 0z" fill="#07041a"/>')
+    b.append(f'<path d="{body}" fill="#0a0722" stroke="{MAGENTA}" stroke-opacity=".6" stroke-width="2"/>')
+    b.append(f'<circle cx="644" cy="222" r="36" fill="#0a0722" stroke="{MAGENTA}" stroke-opacity=".6" stroke-width="2"/>')
+    b.append('<path d="M614 204 l-8 -26 l24 14 l8 -30 l14 28 l22 -16 l-4 28z" fill="#0a0722"/>')
+    b.append(f'<circle cx="643" cy="298" r="22" fill="none" stroke="{CYAN}" stroke-width="3" filter="url(#glow)"/><text class="m" x="643" y="305" text-anchor="middle" font-size="17" font-weight="700" fill="{CYAN}">&lt;/&gt;</text>')
+    # floating code panel
+    b.append(f'<g transform="translate(850,48) skewY(-3)"><rect width="250" height="150" rx="10" fill="#101C45" stroke="{CYAN}" stroke-width="2" filter="url(#glow)"/>')
+    for i, (t, c) in enumerate([("while (ideas) {", TEXT), ("  build();", GREEN), ("  learn();", AMBER), ("  improve();", MAGENTA), ("}", TEXT), ("// still in progress...", MUTED)]):
+        b.append(f'<text class="m" x="16" y="{28+i*22}" font-size="15" fill="{c}">{escape(t)}</text>')
+    b.append('</g>')
+    for i, (t, c) in enumerate([("CODE", TEXT), ("LEARN", TEXT), ("BUILD", TEXT), ("EXPLORE", TEXT), ("REPEAT", MAGENTA)]):
+        b.append(f'<text class="m" x="1170" y="{240+i*26}" font-size="18" letter-spacing="3" fill="{c}" text-anchor="end">{t}</text>')
+    b.append(f'<rect width="640" height="{H}" fill="url(#shade)"/>')
+    script = "'Segoe Script','Snell Roundhand','Brush Script MT','Lucida Handwriting',cursive"
+    b.append(f'<text x="40" y="132" font-family="{script}" font-size="84" fill="#fff" fill-opacity=".9" stroke="url(#neon)" stroke-width="2" filter="url(#glow)">Sarvesh</text>')
+    b.append(f'<text x="120" y="222" font-family="{script}" font-size="84" fill="#fff" fill-opacity=".9" stroke="url(#neon)" stroke-width="2" filter="url(#glow)">Shimpi</text>')
+    b.append(f'<text class="m" x="44" y="290" font-size="24" font-weight="700" letter-spacing="4" fill="{CYAN}">AI/ML ENGINEER</text>')
+    b.append(f'<text class="m" x="44" y="322" font-size="18" letter-spacing="3" fill="{TEXT}">BUILDING INTELLIGENT SYSTEMS</text>')
+    b.append(f'<text class="m" x="44" y="348" font-size="18" letter-spacing="3" fill="{TEXT}">FOR THE REAL WORLD<tspan fill="{GREEN}" style="animation:blink 1s infinite"> _</tspan></text>')
+    b.append(f'<text x="44" y="410" font-size="19" font-style="italic" fill="{TEXT}" opacity=".85">“Building AI solutions for a better tomorrow.”</text>')
+    return svg(W, H, "\n".join(b), "Sarvesh Shimpi — AI/ML Engineer. Building intelligent systems for the real world.")
+
+
+# ───────────────────────── PANEL TITLES ─────────────────────────
+def header(slug, label, sub, accent):
+    W, H = 1000, 56
+    b = (f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="12" fill="#0B1325" stroke="{accent}" stroke-opacity=".45" stroke-width="2"/>'
+         f'<text class="m" x="24" y="37" font-size="22" fill="{accent}">&gt;_ <tspan fill="{TEXT}">{escape(label)}</tspan></text>'
+         f'<text class="m" x="{W-24}" y="35" font-size="14" fill="{MUTED}" text-anchor="end">{escape(sub)}</text>')
+    write(f"headers/{slug}.svg", svg(W, H, b, label))
+
+
+# ───────────────────────── PROJECT CARDS (repo-card style) ─────────────────────────
+PROJECTS = [  # slug, name, category, accent, description, stack, glyph
+    ("voice-agent", "AI Voice Agent for Doctor Appointment Booking", "GENERATIVE AI", MAGENTA,
+     "Autonomous multi-turn voice agent. Cut manual booking workload by 70%.", "Whisper • LLM • TTS", "♫"),
+    ("deepfake", "Deepfake Video Detection System", "COMPUTER VISION", CYAN,
+     "Hybrid CNN-RNN spatial-temporal detector with MTCNN preprocessing.", "CNN • LSTM • Transformer", "◈"),
+    ("ml-platform", "Multi-Model ML Prediction Platform", "ML SYSTEMS", AMBER,
+     "Placement delay, salary and risk prediction. Optuna, A/B testing, Docker REST API.", "Optuna • Docker • Flask", "▦"),
+    ("draggan", "DragGAN", "GENERATIVE AI", MAGENTA,
+     "Point-based real-time image editing with custom losses and refinements.", "GAN • Custom Loss", "✦"),
+    ("pothole", "Real-Time Pothole Detection", "COMPUTER VISION", CYAN,
+     "Road damage detection deployed on edge devices for smart-city monitoring.", "YOLOv8 • EfficientDet", "⌖"),
+    ("rag-qa", "LLM Recommendation & Q&A System", "LLM · RAG", VIOLET,
+     "RAG plus fine-tuned LLM with hybrid vector search for domain Q&A.", "RAG • FAISS • Chroma", "❖"),
+    ("travel-planner", "AI Travel Planner", "AGENTIC AI", GREEN,
+     "Multi-agent itinerary generator with a responsive full-stack web app.", "LangChain • OpenAI • Next.js", "✈"),
+    ("unmaskai", "UnmaskAI", "HACKATHON · PUBLIC REPO", AMBER,
+     "SEED Hackathon submission.", "Python", "◆"),
+]
+
+
+def project_cards():
+    W, H = 600, 190
+    for slug, name, cat, c, desc, stack, glyph in PROJECTS:
+        pub = "PUBLIC REPO" in cat
+        b = [f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="14" fill="#0B1325" stroke="{c}" stroke-opacity=".6" stroke-width="2"/>',
+             f'<text x="34" y="52" font-size="30" fill="{c}" filter="url(#glow)">{glyph}</text>']
+        for i, ln in enumerate(textwrap.wrap(name, 34)[:2]):
+            b.append(f'<text x="76" y="{48+i*26}" font-size="23" font-weight="700" fill="{c}">{escape(ln)}</text>')
+        for i, ln in enumerate(textwrap.wrap(desc, 52)[:2]):
+            b.append(f'<text x="30" y="{98+i*24}" font-size="18" fill="{MUTED}">{escape(ln)}</text>')
+        px = 30
+        for t in stack.split(" • "):
+            w = 11 * len(t) + 26
+            b.append(f'<rect x="{px}" y="140" width="{w}" height="28" rx="14" fill="{BG}" stroke="{c}" stroke-opacity=".5"/><text class="m" x="{px+13}" y="159" font-size="14" fill="{TEXT}">{escape(t)}</text>')
+            px += w + 8
+        tag = "GITHUB" if pub else "RESUME · NO PUBLIC REPO"
+        b.append(f'<text class="m" x="{W-24}" y="{H-14}" font-size="11" letter-spacing="1" fill="{MUTED}" text-anchor="end">SOURCE: {tag}</text>')
+        write(f"projects/{slug}.svg", svg(W, H, "\n".join(b), f"{name} — {cat}. {desc}"))
+
+
+# ───────────────────────── TECH: chips for items without an official icon ─────────────────────────
+TECH = [
+    ("MORE AI / ML", CYAN, ["Hugging Face", "LangChain", "OpenAI API", "Albumentations", "Weights & Biases"]),
+    ("DATA / APIs", VIOLET, ["SQL", "Matplotlib", "REST APIs", "ONNX"]),
+    ("ENGINEERING", AMBER, ["AsyncIO", "Multi-threading", "Model Optimization", "Quantization", "Distributed Training", "Real-time Inference", "A/B Testing", "Feature Engineering"]),
+]
+
+
 if __name__ == "__main__":
-    write("hero/hero.svg", hero())
-    for slug, label, sub, c in [("identity", "IDENTITY", "who", CYAN), ("terminal", "TERMINAL", "shell", VIOLET), ("stats", "SYSTEM STATS", "live telemetry", GREEN),
-                                ("matrix", "CONTRIBUTION MATRIX", "activity", CYAN), ("stack", "TECHNOLOGY CONSTELLATION", "stack", VIOLET),
-                                ("projects", "FEATURED PROJECTS", "builds", MAGENTA), ("ai", "AI SYSTEMS", "core", CYAN),
-                                ("experience", "EXPERIENCE", "system log", CYAN), ("vault", "ACHIEVEMENT VAULT", "unlocked", AMBER),
-                                ("status", "STATUS", "live", GREEN), ("contact", "CONTACT", "open channel", MAGENTA)]:
+    write("hero/banner.svg", banner())
+    for slug, label, sub, c in [("contributions", "contributions", "last 12 months · live", CYAN), ("stack", "Tech Stack", "from resume", VIOLET),
+                                ("projects", "Projects", "from resume + GitHub", MAGENTA), ("ai", "AI Systems", "core", CYAN),
+                                ("terminal", "Terminal", "shell", VIOLET), ("experience", "Experience", "system log", CYAN),
+                                ("vault", "Achievement Vault", "from resume", AMBER), ("status", "Status", "live", GREEN), ("contact", "Contact", "open channel", MAGENTA)]:
         header(slug, label, sub, c)
-    identity(); terminal(); ai_core(); project_cards(); tech(); experience(); achievements(); status(); now_playing(); footer(); frame()
+    terminal(); ai_core(); project_cards(); tech(); experience(); achievements(); status(); now_playing(); footer()
     button("github", "GitHub", "⌥", CYAN); button("email", "Email", "✉", MAGENTA)
     button("linkedin", "LinkedIn", "in", VIOLET); button("portfolio", "Portfolio", "◈", GREEN)

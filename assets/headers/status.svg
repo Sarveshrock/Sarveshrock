@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 90" width="1000" height="90" role="img" aria-label="STATUS">
-<title>STATUS</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 56" width="1000" height="56" role="img" aria-label="Status">
+<title>Status</title>
 <defs>
 <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05070D"/><stop offset="1" stop-color="#0A1020"/></linearGradient>
@@ -16,5 +16,5 @@ text{font-family:'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif} 
 @media (prefers-reduced-motion: reduce){*{animation:none!important;opacity:1!important}}
 
 </style>
-<rect width="1000" height="90" fill="none"/><path d="M0 70 H1000" stroke="#39FF88" stroke-opacity=".35" stroke-width="2"/><path d="M0 70 H260" stroke="#39FF88" stroke-width="3" filter="url(#glow)" stroke-dasharray="14 6" style="animation:drift 2s linear infinite"/><text class="m" x="4" y="22" font-size="17" fill="#39FF88" letter-spacing="3">// live</text><text x="2" y="62" font-size="40" font-weight="800" letter-spacing="4" fill="#EAF2FF">STATUS</text>
+<rect x="1" y="1" width="998" height="54" rx="12" fill="#0B1325" stroke="#39FF88" stroke-opacity=".45" stroke-width="2"/><text class="m" x="24" y="37" font-size="22" fill="#39FF88">&gt;_ <tspan fill="#EAF2FF">Status</tspan></text><text class="m" x="976" y="35" font-size="14" fill="#8FA3BF" text-anchor="end">live</text>
 </svg>

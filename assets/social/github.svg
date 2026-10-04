@@ -16,7 +16,7 @@ text{font-family:'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif} 
 @media (prefers-reduced-motion: reduce){*{animation:none!important;opacity:1!important}}
 
 </style>
-<rect x="1" y="1" width="198" height="62" rx="14" fill="rgba(15,25,45,.9)" stroke="#22E4FF" stroke-width="2"/>
+<rect x="1" y="1" width="198" height="62" rx="14" fill="#0B1325" stroke="#22E4FF" stroke-width="2"/>
 <text x="26" y="42" font-size="24" fill="#22E4FF" filter="url(#glow)">⌥</text>
 <text x="62" y="41" font-size="21" font-weight="700" letter-spacing="1" fill="#EAF2FF">GitHub</text>
 </svg>
