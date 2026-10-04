@@ -198,6 +198,13 @@ def button(slug, label, glyph, c, W=200):
     write(f"social/{slug}.svg", svg(W, H, "\n".join(b), label))
 
 
+def pill(slug, label, c, W=150):
+    H = 44
+    b = [f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="22" fill="{BG2}" stroke="{c}" stroke-width="2"/>',
+         f'<text class="m" x="{W/2}" y="28" font-size="16" font-weight="700" text-anchor="middle" fill="{c}">{escape(label)}</text>']
+    write(f"social/nav-{slug}.svg", svg(W, H, "".join(b), label))
+
+
 def footer():
     W, H = 1200, 340
     random.seed(11)
@@ -346,3 +353,5 @@ if __name__ == "__main__":
     terminal(); ai_core(); project_cards(); tech(); experience(); achievements(); status(); now_playing(); footer()
     button("github", "GitHub", "⌥", CYAN); button("email", "Email", "✉", MAGENTA)
     button("linkedin", "LinkedIn", "in", VIOLET); button("portfolio", "Portfolio", "◈", GREEN); button("enter", "ENTER SARVESH.OS →", "▶", MAGENTA, 340)
+    for sl, lb, c in (("projects", "~/projects", MAGENTA), ("experience", "~/experience", CYAN), ("achievements", "~/achievements", AMBER), ("skills", "~/skills", VIOLET), ("contact", "~/contact", GREEN)):
+        pill(sl, lb, c, 190 if sl == "achievements" else 160)
