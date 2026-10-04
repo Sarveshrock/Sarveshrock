@@ -7,10 +7,8 @@ Computer Vision · Generative AI · LLMs · Agentic AI · Real-time inference
 
 <a href="https://github.com/Sarveshrock"><img src="assets/social/github.svg" height="44" alt="GitHub" /></a>
 <a href="mailto:sarveshshimpi18@gmail.com"><img src="assets/social/email.svg" height="44" alt="Email" /></a>
-<!-- TODO: uncomment and add your real URLs (no placeholders published)
-<a href="https://www.linkedin.com/in/YOUR-HANDLE"><img src="assets/social/linkedin.svg" height="44" alt="LinkedIn" /></a>
-<a href="https://YOUR-PORTFOLIO-URL"><img src="assets/social/portfolio.svg" height="44" alt="Portfolio" /></a>
--->
+<a href="https://www.linkedin.com/in/shimpi-ss-150186389"><img src="assets/social/linkedin.svg" height="44" alt="LinkedIn" /></a>
+<a href="https://6673370a81326085d0471261--scintillating-fairy-e10ba8.netlify.app/"><img src="assets/social/portfolio.svg" height="44" alt="Portfolio" /></a>
 
 </div>
 
@@ -101,7 +99,7 @@ Computer Vision · Generative AI · LLMs · Agentic AI · Real-time inference
 
 <img src="assets/headers/projects.svg" width="100%" alt="Featured projects" />
 
-<sub>Resume projects below are not published as public repositories.</sub>
+<sub>Projects below are taken from my resume. Their source code is not published in my public repositories, so none are linked.</sub>
 
 <img src="assets/projects/voice-agent.svg" width="600" alt="AI Voice Agent for Doctor Appointment Booking" />
 <img src="assets/projects/deepfake.svg" width="600" alt="Deepfake Video Detection System" />
@@ -111,11 +109,9 @@ Computer Vision · Generative AI · LLMs · Agentic AI · Real-time inference
 <img src="assets/projects/rag-qa.svg" width="600" alt="LLM-powered personalized recommendation and Q&A system" />
 <img src="assets/projects/travel-planner.svg" width="600" alt="AI Travel Planner with multi-agent architecture" />
 
-### Public repositories
+### Public repository
 
-<a href="https://github.com/Sarveshrock/AURA"><img src="assets/projects/aura.svg" width="600" alt="AURA — view repository" /></a>
-<a href="https://github.com/Sarveshrock/AI-Contract"><img src="assets/projects/contractlens.svg" width="600" alt="ContractLens Enterprise (AI-Contract) — view repository" /></a>
-<a href="https://github.com/Sarveshrock/UnmaskAI"><img src="assets/projects/unmaskai.svg" width="600" alt="UnmaskAI — view repository" /></a>
+<a href="https://github.com/Sarveshrock/UnmaskAI"><img src="assets/projects/unmaskai.svg" width="600" alt="UnmaskAI, SEED Hackathon submission — view repository" /></a>
 
 </div>
 
@@ -134,6 +130,8 @@ Computer Vision · Generative AI · LLMs · Agentic AI · Real-time inference
 <div align="center">
 
 <img src="assets/headers/vault.svg" width="100%" alt="Achievement vault" />
+
+<sub>Achievements as listed on my resume.</sub>
 
 <img src="assets/achievements/iisc.svg" width="440" alt="IISc Bangalore, 3rd Prize" />
 <img src="assets/achievements/iitb.svg" width="440" alt="IIT Bombay, robotic optimization, 30% less processing time" />
@@ -161,6 +159,8 @@ Computer Vision · Generative AI · LLMs · Agentic AI · Real-time inference
 
 <a href="https://github.com/Sarveshrock"><img src="assets/social/github.svg" height="44" alt="GitHub" /></a>
 <a href="mailto:sarveshshimpi18@gmail.com"><img src="assets/social/email.svg" height="44" alt="Email" /></a>
+<a href="https://www.linkedin.com/in/shimpi-ss-150186389"><img src="assets/social/linkedin.svg" height="44" alt="LinkedIn" /></a>
+<a href="https://6673370a81326085d0471261--scintillating-fairy-e10ba8.netlify.app/"><img src="assets/social/portfolio.svg" height="44" alt="Portfolio" /></a>
 
 <br><br>
 

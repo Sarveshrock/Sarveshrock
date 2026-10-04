@@ -22,5 +22,6 @@ text{font-family:'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif} 
 <text x="30" y="128" font-size="19" fill="#8FA3BF">SEED Hackathon submission.</text>
 <text class="m" x="30" y="222" font-size="16" fill="#EAF2FF">Python</text>
 <path d="M30 236 H570" stroke="#FFB020" stroke-opacity=".3"/>
+<text class="m" x="30" y="258" font-size="13" letter-spacing="1" fill="#8FA3BF">SOURCE: GITHUB</text>
 <rect x="0" y="0" width="600" height="30" fill="#FFB020" opacity=".07" style="animation:scan 5s linear infinite"/>
 </svg>

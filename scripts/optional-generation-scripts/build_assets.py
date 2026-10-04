@@ -181,11 +181,7 @@ PROJECTS = [  # slug, name, category, accent, description, stack
      "RAG plus fine-tuned LLM for domain-specific question answering with hybrid vector search.", "RAG • FAISS • Chroma • Fine-tuning"),
     ("travel-planner", "AI TRAVEL PLANNER", "AGENTIC AI", GREEN,
      "Multi-agent itinerary generator with a responsive full-stack web app and dynamic visualizations.", "LangChain • OpenAI • Next.js • TypeScript"),
-    # public repositories
-    ("aura", "AURA", "AGENTIC AI · PUBLIC REPO", GREEN,
-     "Personal AI decision-maker platform: React frontend, Node/TypeScript backend, FastAPI AI service.", "FastAPI • React • TypeScript • Supabase"),
-    ("contractlens", "CONTRACTLENS ENTERPRISE", "LLM · PUBLIC REPO", VIOLET,
-     "AI contract intelligence and obligation operations. Every AI-derived fact carries a verified source quote.", "Python • PyQt6 • ChromaDB • OpenAI"),
+    # public repository (GitHub-verified description only)
     ("unmaskai", "UNMASKAI", "HACKATHON · PUBLIC REPO", AMBER,
      "SEED Hackathon submission.", "Python"),
 ]
@@ -201,6 +197,8 @@ def project_cards():
             b.append(f'<text x="30" y="{128+i*27}" font-size="19" fill="{MUTED}">{escape(ln)}</text>')
         b.append(f'<text class="m" x="30" y="{H-48}" font-size="16" fill="{TEXT}">{escape(stack)}</text>')
         b.append(f'<path d="M30 {H-34} H{W-30}" stroke="{c}" stroke-opacity=".3"/>')
+        tag = "SOURCE: GITHUB" if "PUBLIC REPO" in cat else "SOURCE: RESUME · NO PUBLIC REPO"
+        b.append(f'<text class="m" x="30" y="{H-12}" font-size="13" letter-spacing="1" fill="{MUTED}">{tag}</text>')
         b.append(f'<rect x="0" y="0" width="{W}" height="30" fill="{c}" opacity=".07" style="animation:scan 5s linear infinite"/>')
         write(f"projects/{slug}.svg", svg(W, H, "\n".join(b), f"{name} — {cat}. {desc}"))
 

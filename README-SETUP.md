@@ -10,7 +10,7 @@
 | AI core | `assets/animations/ai-core.svg` | 900×560 | SVG; flowing dashed links, pulsing core |
 | Experience log | `assets/animations/experience.svg` | 900×760 | SVG; pulsing nodes |
 | Status / Now playing | `assets/animations/status.svg`, `now-playing.svg` | 440×330 | SVG; progress bar via SMIL (visual only, no audio) |
-| Project cards (7 resume + 3 public repos) | `assets/projects/*.svg` | 600×270 | SVG; scan sweep |
+| Project cards (7 resume projects + 1 public repo) | `assets/projects/*.svg` | 600×270 | SVG; scan sweep |
 | Achievement cards | `assets/achievements/*.svg` | 440×220 | SVG |
 | Tech constellation | `assets/tech/*.svg` | 900×var | SVG chips with glow |
 | Section headers | `assets/headers/*.svg` | 1000×90 | SVG; moving dashed rule |
@@ -38,8 +38,8 @@ These replace or augment the SVGs if you want painted artwork. Keep each under ~
 2. Copy `README.md` and the whole `assets/` folder into the repo root. Optionally copy `scripts/` too.
 3. Back up the old README first (it is currently the Full Stack template).
 4. Commit and push to `main`. The profile updates immediately. Relative image paths (`assets/...`) work on github.com.
-5. Uncomment the LinkedIn and Portfolio buttons in `README.md` after adding your real URLs. Your resume lists links but I didn't receive the URLs, so I published none. The old portfolio link in your current README is a Netlify preview URL and may be stale.
-6. Pin your best repos (AURA, AI-Contract, UnmaskAI) on the profile.
+5. LinkedIn is linked (URL supplied by you). Portfolio is linked (URL supplied by you; returned HTTP 200, title "Sarvesh Shimpi's portfolio").
+6. Suggested GitHub bio (set at github.com/settings/profile; I cannot edit it): "AI/ML Engineer at Infosys. Computer Vision, Generative AI, LLMs."
 
 To regenerate or edit assets: `python scripts/optional-generation-scripts/build_assets.py`, then commit.
 
@@ -72,10 +72,10 @@ Optional full-year contribution snake: add `.github/workflows/snake.yml` using `
 - Large text in the hero (about 100 px in a 1200 px viewBox) stays readable. The boot-log text inside the hero is small on phones, and its content is repeated as real text in the terminal section.
 - Every image has descriptive alt text, so screen readers and text-only views still get the content.
 
-## 7. Notes and caveats
+## 7. Fact provenance (Golden rule: visual creativity unlimited, factual creativity zero)
 
-- Project accuracy: all descriptions are paraphrased from your resume. Resume projects have no links because I found no matching public repos. I did not map UnmaskAI to the Deepfake project. Tell me if it is the same project.
-- AURA and ContractLens (AI-Contract) cards are described from their own READMEs.
-- Missing repos: BoxOffice, FileFinder, Travel-Planner-AI, DeepSafe, Jarber, HarvestHero don't exist publicly, so they are not shown. FileFinder appears in the CanSpirit AI experience entry only.
-- Privacy: your phone number is intentionally not published.
-- Repo hygiene: some public repos have unprofessional descriptions (NASA, Max-num) and several are course or tutorial leftovers. Consider renaming, editing descriptions or archiving them before recruiters look.
+- Resume-sourced: roles, dates, education, skills, the 7 projects, achievements. Project cards say "SOURCE: RESUME · NO PUBLIC REPO" and carry no links.
+- GitHub-sourced: UnmaskAI (description "SEED HACKATHON Submission", language Python, verified to exist). Repo count, followers and following are live badges, never typed in.
+- User-supplied self-descriptions (identity panel, terminal, "currently building" list, tagline) come from your own brief, not from either source. Review them if you want a strictly evidence-only page.
+- Not shown: phone number, any repo not verified, AURA, AI-Contract, BoxOffice, FileFinder, Travel-Planner-AI, DeepSafe, Jarber, HarvestHero, Portfolio link.
+- Repo hygiene is yours to handle: NASA, Max-num and Intern have unprofessional descriptions.
